@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho - Impactos do Desmatamento</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="assets/images/logo.png" alt="Logo Agrinho" class="logo">
+            <h1>Impactos do Desmatamento</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#introducao">Introdução</a></li>
+                <li><a href="#causas">Causas</a></li>
+                <li><a href="#impactos">Impactos</a></li>
+                <li><a href="#solucoes">Soluções</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="introducao" class="hero">
+            <div class="hero-content">
+                <h2>Preservar hoje para viver amanhã</h2>
+                <p>O desmatamento é uma das maiores ameaças ao nosso planeta. Conheça seus impactos e como podemos agir.</p>
+                <button class="cta-button" onclick="scrollToSection('causas')">Saiba mais</button>
+            </div>
+        </section>
+
+        <section id="causas" class="section">
+            <h2>Causas do Desmatamento</h2>
+            <div class="card-container">
+                <div class="card">
+                    <i class="fas fa-tractor"></i>
+                    <h3>Expansão Agrícola</h3>
+                    <p>Responsável por 80% do desmatamento global, principalmente para criação de gado e plantio de soja.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-tree"></i>
+                    <h3>Exploração Madeireira</h3>
+                    <p>Extração ilegal de madeira nobre causa danos irreparáveis às florestas.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-city"></i>
+                    <h3>Expansão Urbana</h3>
+                    <p>Crescimento desordenado das cidades invade áreas de preservação.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="impactos" class="section dark-section">
+            <h2>Impactos do Desmatamento</h2>
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <img src="assets/images/floresta.jpg" alt="Biodiversidade">
+                    <h3>Perda de Biodiversidade</h3>
+                    <p>Espécies são extintas antes mesmo de serem descobertas.</p>
+                </div>
+                <div class="impact-item">
+                    <img src="assets/images/desmatamento.jpg" alt="Mudanças Climáticas">
+                    <h3>Mudanças Climáticas</h3>
+                    <p>As florestas são os pulmões do planeta - sem elas, o clima se altera drasticamente.</p>
+                </div>
+                <div class="impact-item">
+                    <i class="fas fa-tint"></i>
+                    <h3>Alteração do Ciclo Hidrológico</h3>
+                    <p>Menos árvores significa menos chuvas e mais secas.</p>
+                </div>
+                <div class="impact-item">
+                    <i class="fas fa-lungs"></i>
+                    <h3>Problemas de Saúde</h3>
+                    <p>Qualidade do ar piora, aumentando doenças respiratórias.</p>
+                </div>
+            </div>
+            <div class="video-container">
+                <video controls>
+                    <source src="assets/videos/impacto-desmatamento.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
+        </section>
+
+        <section id="solucoes" class="section">
+            <h2>Soluções e Ações</h2>
+            <div class="solutions">
+                <div class="solution-text">
+                    <h3>O que podemos fazer?</h3>
+                    <ul>
+                        <li>Consumo consciente de produtos florestais</li>
+                        <li>Apoio a políticas de preservação</li>
+                        <li>Educação ambiental nas comunidades</li>
+                        <li>Reflorestamento de áreas degradadas</li>
+                        <li>Uso de tecnologias sustentáveis</li>
+                    </ul>
+                </div>
+                <div class="solution-image">
+                    <img src="assets/images/solucoes.jpg" alt="Soluções">
+                </div>
+            </div>
+            <div class="action-call">
+                <p>Juntos podemos fazer a diferença!</p>
+                <button class="cta-button" onclick="showCommitmentForm()">Assumir o compromisso</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Projeto Agrinho 2023 - Conscientização sobre o Desmatamento</p>
+            <p>Desenvolvido por [Seu Nome]</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="commitment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h3>Assumir o Compromisso</h3>
+            <p>Eu me comprometo a:</p>
+            <form id="commitment-form">
+                <div class="form-group">
+                    <input type="checkbox" id="reduce-paper" name="reduce-paper">
+                    <label for="reduce-paper">Reduzir o consumo de papel</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="sustainable-products" name="sustainable-products">
+                    <label for="sustainable-products">Comprar produtos sustentáveis</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="educate-others" name="educate-others">
+                    <label for="educate-others">Educar outras pessoas</label>
+                </div>
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <button type="submit" class="submit-button">Enviar Compromisso</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
